@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        font-family: 'Nunito', sans-serif; 
+        scroll-behavior: smooth;
+    }
+
+    ._display-1-bold {
+        @apply text-display-1 font-bold;
+    }
+
+    ._display-2-bold {
+        @apply text-display-2 font-bold;
+    }
+
+    ._heading-1-bold {
+        @apply text-heading-1 font-bold;
+    }
+
+    ._heading-2-bold {
+        @apply text-heading-2 font-bold;
+    }
+
+    ._heading-3-bold {
+        @apply text-heading-3 font-bold;
+    }
+
+    ._heading-4-bold {
+        @apply text-heading-4 font-bold;
+    }
+
+    ._heading-5-bold {
+        @apply text-heading-5 font-bold;
+    }
+
+    ._heading-5-regular {
+        @apply text-heading-5 font-normal;
+    }
+
+    ._heading-6-bold {
+        @apply text-heading-6 font-bold;
+    }
+
+    ._heading-6-regular {
+        @apply text-heading-6 font-normal leading-8;
+    }
+
+    ._paragraph-1-bold {
+        @apply text-paragraph-1 font-bold;
+    }
+
+    ._paragraph-1-regular {
+        @apply text-paragraph-1 font-normal;
+    }
+
+    ._paragraph-2-bold {
+        @apply text-paragraph-2 font-bold;
+    }
+
+    ._paragraph-2-regular {
+        @apply text-paragraph-2 font-normal;
+    }
+
+    ._paragraph-3-bold {
+        @apply text-paragraph-3 font-bold;
+    }
+
+    ._paragraph-3-regular {
+        @apply text-paragraph-3 font-normal;
+    }
+} 
+
+@layer components {
+    ._container {
+        @apply container mx-[1.25rem] lg:mx-[3rem];
+    }
+
+    .__container {
+        @apply container mx-auto;
+    }
+
+    .___container {
+        @apply w-full pl-40;
+    }
+
+    ._gap-gutter {
+        @apply gap-x-[1.25rem] lg:gap-x-[1.875rem];
+    }
+
+    /* Navbar Default */
+    ._navbar {
+        @apply bg-transparent top-0 fixed left-0 right-0 border-gray-200 py-3.5 z-50 transition-all duration-200 ease-in-out;
+    }
+
+    ._navbar.scrolled {
+        @apply bg-white transition-all duration-200 ease-in-out shadow-md;
+    }
+
+    ._navbar ._navbar-nav {
+        @apply flex flex-col mt-4 _paragraph-1-bold text-white md:flex-row md:space-x-[3.125rem] md:mt-0 lg:_heading-6-bold;
+    }
+
+    ._navbar.scrolled ._navbar-nav {
+        @apply transition-all duration-200 ease-in-out shadow-none;
+    }
+
+    ._navbar.scrolled #btn {
+        @apply _btn-primary-outline;
+    }
+
+    ._navbar.scrolled .hamburger-line {
+        @apply bg-primary;
+    }
+
+    ._navbar ._navbar-nav ._nav-link {
+        @apply block py-2 pr-4 pl-3 text-textColor-black lg:text-white hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0;
+    }
+
+    ._navbar.scrolled ._navbar-nav ._nav-link {
+        @apply text-textColor-black;
+    }
+
+    ._navbar ._navbar-nav ._nav-link-active {
+        @apply block py-2 pr-4 pl-3 bg-primary text-white rounded md:bg-transparent md:p-0;
+    }
+
+    ._navbar.scrolled ._navbar-nav ._nav-link-active {
+        @apply text-white lg:text-textColor-black;
+    }
+    /* End Navbar Default */
+
+
+    /* Navbar White */
+    ._navbar-white {
+        @apply bg-white top-0 fixed left-0 right-0 border-gray-200 py-3.5 z-50 transition-all duration-200 ease-in-out;
+    }
+
+    ._navbar-white.scrolled {
+        @apply shadow-md transition-all duration-200 ease-in-out;
+    }
+
+    ._navbar-white ._navbar-nav {
+        @apply flex flex-col mt-4 _paragraph-1-bold text-white md:flex-row md:space-x-[3.125rem] md:mt-0 lg:_heading-6-bold;
+    }
+
+    ._navbar-white.scrolled ._navbar-nav {
+        @apply shadow-none;
+    }
+
+    ._navbar-white #btn {
+        @apply _btn-primary-outline;
+    }
+
+    ._navbar-white ._navbar-nav ._nav-link {
+        @apply block py-2 pr-4 pl-3 text-textColor-black hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0;
+    }
+
+    ._navbar-white .hamburger-line {
+        @apply bg-primary;
+    }
+
+    ._navbar-white ._navbar-nav ._nav-link-active {
+        @apply block py-2 pr-4 pl-3 bg-primary text-white lg:text-textColor-black rounded md:bg-transparent md:p-0;
+    }
+    /* End Navbar White */
+
+
+
+    /* Tabs */
+    .tab {
+        @apply border-b overflow-hidden flex;
+    }
+
+    .tab button {
+        @apply text-textColor-black _paragraph-1-bold lg:_heading-5-bold px-3 lg:px-4 py-3;
+    }
+
+    .tab button.active {
+        @apply lg:_heading-5-bold px-3 lg:px-4 py-3 border-b-2 text-primary border-primary;
+    }
+
+    .tabcontent {
+        @apply pt-[1.875rem] lg:pt-10 hidden;
+    }
+
+    .tabcontent {
+        animation: fadeEffect 0.3s;
+        /* Fading effect takes 1 second */
+    }
+
+    ._header {
+        background: linear-gradient(90deg, #0B8457 32.37%, rgba(11, 132, 87, 0.51) 99.97%, rgba(11, 132, 87, 0.51) 100%), url(./assets/img/hero.png);
+    }
+    /* End Tabs */
+
+
+
+    /* Badge */
+    ._badge {
+        @apply bg-primary px-3 py-1 _paragraph-3-bold lg:_paragraph-2-bold text-white uppercase rounded-[1.875rem];
+    }
+    /* End Badge */
+
+
+    ._cta {
+        background: linear-gradient(90deg, #0B8457 0%, rgba(255, 247, 106, 0.63092) 99.83%, rgba(255, 247, 106, 0.63) 100%), url(./assets/img/cta.png);
+    }
+
+    ._btn-text-primary {
+        @apply text-primary underline underline-offset-1;
+    }
+
+    ._btn-primary {
+        @apply bg-btnColor-primaryDefault hover:bg-btnColor-primaryHover text-textColor-white;
+    }
+
+    ._btn-secondary {
+        @apply bg-btnColor-secondaryDefault hover:bg-btnColor-secondaryHover text-textColor-black;
+    }
+
+    ._btn-primary-outline {
+        @apply bg-transparent border-2 border-primary text-primary;
+    }
+
+    ._btn-secondary-outline {
+        @apply bg-transparent border-2 border-secondary text-secondary;
+    }
+
+    ._btn-white-outline {
+        @apply bg-transparent border-2 border-white text-white;
+    }
+
+    ._btn-small {
+        @apply px-3.5 py-1.5 _paragraph-3-bold rounded-lg;
+    }
+
+    ._btn-medium {
+        @apply px-5 py-3 _heading-6-bold rounded-lg;
+    }
+}
+
+@layer utilities {
+    ._disabled {
+        @apply pointer-events-none;
+    }
+
+    ._shadow-sm {
+        border: 2px solid #F3F4F8;
+        filter: drop-shadow(0px 1px 12px rgba(19, 23, 61, 0.05));
+    }
+
+    ._shadow {
+        box-shadow: 0px 24px 48px rgba(64, 64, 64, 0.08);
+    }
+
+    ._line-primary {
+        @apply w-10 lg:w-20 mt-2 bg-primary h-1 border-none rounded-xl;
+    }
+
+    .hamburger-line {
+        @apply w-[20px] bg-white h-[2px] my-[5px] block rounded;
+    }
+
+    .hamburger-active>span:nth-child(1) {
+        @apply rotate-45 transform transition-all duration-200;
+    }
+
+    .hamburger-active>span:nth-child(2) {
+        @apply scale-0 transition-all duration-200;
+    }
+
+    .hamburger-active>span:nth-child(3) {
+        @apply -rotate-45 transform transition-all duration-200;
+    }
+}
