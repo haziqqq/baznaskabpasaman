@@ -177,15 +177,15 @@
     }
 
     .tab button {
-        @apply text-textColor-black _paragraph-1-bold lg:_heading-5-bold px-3 lg:px-4 py-3;
+        @apply text-textColor-black _paragraph-1-bold lg:_heading-5-bold px-3 lg:px-4 py-3 w-1/2;
     }
 
     .tab button.active {
-        @apply lg:_heading-5-bold px-3 lg:px-4 py-3 border-b-2 text-primary border-primary;
+        @apply lg:_heading-5-bold px-3 lg:px-4 py-3 border-b-2 text-primary border-primary w-1/2;
     }
 
     .tabcontent {
-        @apply pt-[1.875rem] lg:pt-10 hidden;
+        @apply hidden;
     }
 
     .tabcontent {
@@ -205,6 +205,19 @@
         @apply bg-primary px-3 py-1 _paragraph-3-bold lg:_paragraph-2-bold text-white uppercase rounded-[1.875rem];
     }
     /* End Badge */
+
+
+
+    /* Form Input */
+    ._form-input {
+        @apply _paragraph-2-regular placeholder:text-textColor-darkGrey rounded-lg border border-[#DDE5E9] focus:ring-primary focus:border-primary px-4 py-2.5;
+    }
+
+    ._form-label {
+        @apply _paragraph-2-bold text-textColor-black block;
+    }
+    /* End Form Input */
+
 
 
     ._cta {
@@ -241,6 +254,10 @@
 
     ._btn-medium {
         @apply px-5 py-3 _heading-6-bold rounded-lg;
+    }
+
+    ._btn-large {
+        @apply py-3 _heading-6-bold lg:_heading-5-bold rounded-lg;
     }
 }
 
