@@ -194,7 +194,7 @@
     }
 
     ._header {
-        background: linear-gradient(90deg, #0B8457 32.37%, rgba(11, 132, 87, 0.51) 99.97%, rgba(11, 132, 87, 0.51) 100%), url(./assets/img/hero.png);
+        background: linear-gradient(90deg, #0B8457 32.37%, rgba(11, 132, 87, 0.51) 99.97%, rgba(11, 132, 87, 0.51) 100%), url(../assets/img/hero.png);
     }
     /* End Tabs */
 
@@ -221,7 +221,7 @@
 
 
     ._cta {
-        background: linear-gradient(90deg, #0B8457 0%, rgba(255, 247, 106, 0.63092) 99.83%, rgba(255, 247, 106, 0.63) 100%), url(./assets/img/cta.png);
+        background: linear-gradient(90deg, #0B8457 0%, rgba(255, 247, 106, 0.63092) 99.83%, rgba(255, 247, 106, 0.63) 100%), url(../assets/img/cta.png);
     }
 
     ._btn-text-primary {
