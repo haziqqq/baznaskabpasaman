@@ -92,6 +92,8 @@
         @apply gap-x-[1.25rem] lg:gap-x-[1.875rem];
     }
 
+
+
     /* Navbar Default */
     ._navbar {
         @apply bg-transparent top-0 fixed left-0 right-0 border-gray-200 py-3.5 z-50 transition-all duration-200 ease-in-out;
@@ -135,6 +137,7 @@
     /* End Navbar Default */
 
 
+
     /* Navbar White */
     ._navbar-white {
         @apply bg-white top-0 fixed left-0 right-0 border-gray-200 py-3.5 z-50 transition-all duration-200 ease-in-out;
@@ -171,6 +174,13 @@
 
 
 
+    /* Breadcrumb */
+    ._breadcrumb-link {
+        @apply inline-flex items-center gap-x-2.5 _paragraph-2-bold lg:_heading-6-bold text-primary hover:text-btnColor-primaryHover;
+    }
+    /* End Breadcrumb */
+
+
     /* Tabs */
     .tab {
         @apply border-b overflow-hidden flex;
@@ -178,10 +188,14 @@
 
     .tab button {
         @apply text-textColor-black _paragraph-1-bold lg:_heading-5-bold px-3 lg:px-4 py-3 w-1/2;
-    }
+    }   
 
     .tab button.active {
         @apply lg:_heading-5-bold px-3 lg:px-4 py-3 border-b-2 text-primary border-primary w-1/2;
+    }
+
+    .tab button:hover {
+        background-color: rgb(245, 245, 245);
     }
 
     .tabcontent {
@@ -190,11 +204,16 @@
 
     .tabcontent {
         animation: fadeEffect 0.3s;
-        /* Fading effect takes 1 second */
     }
 
-    ._header {
-        background: linear-gradient(90deg, #0B8457 32.37%, rgba(11, 132, 87, 0.51) 99.97%, rgba(11, 132, 87, 0.51) 100%), url(../assets/img/hero.png);
+    @keyframes fadeEffect {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
     }
     /* End Tabs */
 
@@ -219,6 +238,10 @@
     /* End Form Input */
 
 
+
+    ._header {
+        background: linear-gradient(90deg, #0B8457 32.37%, rgba(11, 132, 87, 0.51) 99.97%, rgba(11, 132, 87, 0.51) 100%), url(../assets/img/hero.png);
+    }
 
     ._cta {
         background: linear-gradient(90deg, #0B8457 0%, rgba(255, 247, 106, 0.63092) 99.83%, rgba(255, 247, 106, 0.63) 100%), url(../assets/img/cta.png);
@@ -263,7 +286,7 @@
 
 @layer utilities {
     ._disabled {
-        @apply pointer-events-none;
+        @apply pointer-events-none font-normal text-textColor-darkGrey;
     }
 
     ._shadow-sm {
